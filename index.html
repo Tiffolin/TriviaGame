@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <Title>Trivia Game</Title>
+    <!-- link to CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+        <!--Header-->
+         <div class="container-fluid outerdiv">      
+            <header class="container-fluid innerdiv">
+            <img  class ="img-fluid" src="https://fontmeme.com/permalink/190220/7e69adc3fa8ac911372b8da9f2bb0b98.png" alt="batman-font" border="0">
+            </header>
+         </div>
+
+        <!--Start button-->
+        <div class="container-fluid outerdiv">     
+        <button type="button" class="btn btn-default innerdiv start">
+            <img src="https://fontmeme.com/permalink/190220/27d0bb0a964440c00e666f030325c5c8.png" alt="batman-font" border="0">
+        </button>
+    
+        <!--main contents-->
+    <div class="container-fluid" id="main">
+         <!--Timer-->
+        <div class="container-fluid outerdiv">
+        <div class="container-fluid innerdiv" id="timer">02:00</div>
+        </div>
+
+        <!--Quizz-->
+        <div class="container-fluid outerdiv" id="quizz">
+
+            <form action="/action_page.php" method="get">
+                <p class="container-fluid question">1. Who was the first Robin?</p>
+                <input class = "answer1" type="checkbox" name="Damian Wayne" value="Damian Wayne">..Damian Wayne.....
+                <input class = "answer1" type="checkbox" name="Tim Drake" value="Tim Drake">..Tim Drake.....
+                <input class = "answer1"type="checkbox" name="Jason Todd" value="Jason Todd">..Jason Todd.....
+                <input class = "answer1" type="checkbox" name="Dick Grayson" value="Dick Grayson">..Dick Grayson.....
+            </form>  
+                <br><br>
+            <form action="/action_page.php" method="get">
+                <p class="container-fluid question">2. Batman's true idendity is:</p>
+                <input class = "answer" type="checkbox" name="Tony Stark" value="Tony Stark">..Tony Stark.....
+                <input class = "answer" type="checkbox" name="Oliver Queen" value="Oliver Queen">..Oliver Queen.....
+                <input class = "answer" type="checkbox" name="Bruce Wayne" value="Bruce Wayne">..Bruce Wayne.....
+                <input class = "answer" type="checkbox" name="Hank Pym" value="Hank Pym">..Hank Pym.....
+            </form>
+                <br><br>
+            <form action="/action_page.php" method="get">
+                <p class="container-fluid question">3. Oracle used to be:</p>
+                <input class = "answer" type="checkbox" name="Robin" value="Robin">..Robin.....
+                <input class = "answer" type="checkbox" name="Tarot" value="Tarot">..Tarot.....
+                <input class = "answer" type="checkbox" name="Batgirl" value="Batgirl">..Batgirl.....
+                <input class = "answer" type="checkbox" name="Catwoman" value="Catwoman">..Catwoman.....
+            </form>
+                <br><br>
+            <form action="/action_page.php" method="get">
+                <p class="container-fluid question">4. Who killed Jason Todd?</p>
+                <input class = "answer"type="checkbox" name="Joker" value="Joker">..Joker.....
+                <input class = "answer" type="checkbox" name="Two-face" value="Two-face">..Two-face.....
+                <input class = "answer" type="checkbox" name="Peguin" value="Peguin">..Peguin.....
+                <input class = "answer" type="checkbox" name="Poison Ivy" value="Poison Ivy">..Poison Ivy.....
+            </form>
+                <br><br>
+            <form action="/action_page.php" method="get"> 
+                <p class="container-fluid question">5. Which of the Robins is Bruce's biological son?</p>
+                <input class = "answer" type="checkbox" name="Damian Wayne" value="Damian Wayne">..Damian Wayne.....
+                <input class = "answer" type="checkbox" name="Tim Drake" value="Tim Drake">..Tim Drake.....
+                <input class = "answer"type="checkbox" name="Jason Todd" value="Jason Todd">..Jason Todd.....
+                <input class = "answer" type="checkbox" name="Dick Grayson" value="Dick Grayson">..Dick Grayson.....
+            </form>
+                <br><br>
+            <form action="/action_page.php" method="get"> 
+                <p class="container-fluid question">6. Which of the following animals are not pets of Damian's?</p>
+                <input class = "answer" type="checkbox" name="Titus the dog" value="Titus the dog">..Titus the dog.....
+                <input class = "answer" type="checkbox" name="Alfred the cat" value="Alfred the cat">..Alfred the cat.....
+                <input class = "answer"type="checkbox" name="Bat-cow the cow" value="Bat-cow the cow">..Bat-cow the cow.....
+                <input class = "answer" type="checkbox" name="Bat the bat" value="Bat the bat">..Bat the bat.....
+            </form>
+                <br><br>
+            <form action="/action_page.php" method="get">
+                <p class="container-fluid question">7. The first robin grows up to be:</p>
+                <input class = "answer" type="checkbox" name="Nightwing" value="Nightwing">..Nightwing.....
+                <input class = "answer" type="checkbox" name="Flamebird" value="Flamebird">..Flamebird.....
+                <input class = "answer"type="checkbox" name="Agent A" value="Agent A">..Agent A.....
+                <input class = "answer" type="checkbox" name="Red Robin" value="Red Robin">..Red Robin.....
+            </form>
+
+            <button type="button" class="btn btn-default innerdiv submit">
+                <img src="https://fontmeme.com/permalink/190221/7c8a31cbdc099df14d01ab9369b7363e.png" alt="batman-font" border="0">
+            </button>
+            
+            <br><br><br>
+        </div>
+    </div>
+
+        <!--Scoreboard-->
+        <div class="container-fluid outerdiv">
+        <div class="container-fluid innerdiv" id="scoreboard">
+            <span class="container-fluid right">You got</span>
+            <span class="container-fluid right" id="rightNum"></span>
+            <span class="container-fluid right">right</span>
+            <br>
+            <span class="container-fluid wrong">You got</span>
+            <span class="container-fluid wrong" id="wrongNum"></span>
+            <span class="container-fluid wrong">right</span>
+            <br>
+            <span class="container-fluid unanswered">Unanswered</span>
+            <span class="container-fluid unanswered" id="unanswered"></span>
+        </div>
+        </div>
+
+
+   
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- JS stylesheet -->
+<script src="assets/javascript/app.js"></script>
+
+</body>
+</html>

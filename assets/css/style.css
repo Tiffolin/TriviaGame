@@ -1,0 +1,63 @@
+body {
+    background-image: url(https://wallpaperplay.com/walls/full/1/7/0/92583.jpg);
+    overflow:auto;
+}
+
+/*centering divs*/
+
+.outerdiv{
+    text-align: center;
+}
+
+.innerdiv{
+    display: inline-block;
+}
+
+/*start button*/
+.btn{
+    margin-top: 15%;
+}
+
+/*quizz body*/
+#main{
+    display: none;
+    margin-top: 20px;
+}
+
+p.question{
+    color:lightgrey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+.answer{
+    color:white;
+}
+
+form{
+    color:white;
+}
+
+#timer{
+    opacity: 0.8;
+    font-size: 60px;
+    color:silver;
+    font-weight: bold;
+
+}
+
+
+#quizzBody{
+    background-color:grey;
+    opacity: 0.8;
+}
+
+#scoreboard{
+    display:none;
+    margin-top: 10%;
+    opacity: 0.8;
+    font-size: 40px;
+    color:silver;
+    font-weight: bold;
+
+}
