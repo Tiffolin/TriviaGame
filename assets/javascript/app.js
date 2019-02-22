@@ -39,20 +39,14 @@ $(".start").click(function(){
 
 
 //only 1 answer is allowed to be selected per question
-// $('input:checkbox').click(function() {
-//     $('input:checkbox').not(this).prop('checked', false);
-// });
+$('input:checkbox').click(function() {
+   console.log( $('input:checkbox'));
+    // .not(this).prop('checked', false);
+});
 
 
 //for each question, if selected answer == answer, then ++ to right
 //else ++ to wrong
-
-
-
-
-
-
-
 
 
 
