@@ -3,7 +3,7 @@ $(document).ready(function(){
 var docReady = "document ready";
 console.log(docReady);
 
-//counter function
+//timer function
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -15,7 +15,7 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        //when counter == 0, the main body disappears, and the scoreboard appears
+        //when timer == 0, the main body disappears, and the scoreboard appears
         if (--timer < 0) {
             $("#main").hide();
             $("#scoreboard").show();
@@ -26,7 +26,7 @@ function startTimer(duration, display) {
 
 //onclick of start button the following happens:
     // the button disappears, the main body with questions appear
-    // counter starts
+    // timer starts
 $(".start").click(function(){
      $(this).hide();
      $("#main").show();
@@ -38,15 +38,50 @@ $(".start").click(function(){
 });
 
 
-//only 1 answer is allowed to be selected per question
-$('input:checkbox').click(function() {
-   console.log( $('input:checkbox'));
-    // .not(this).prop('checked', false);
+//only 1 answer is allowed to be selected per question 
+//this was achieved by using type:radio btns and assigning them the same names in html
+
+
+//for each question, if selected ansSelected == correctAns, then ++ to right
+//else ++ to wrong
+
+var userSelected =[];
+
+$(".answer").click(function(){
+    var ansSelected = $(this).attr("value");
+    // console.log(ansSelected);
+    userSelected.push(ansSelected);
+    console.log(userSelected);
+    matchAns();
 });
 
+var correctAns = [4, 7, 11, 13, 17, 24, 25];
 
-//for each question, if selected answer == answer, then ++ to right
-//else ++ to wrong
+ function matchAns(){
+
+    var unanswered = 0;
+    var right = 0;
+    var wrong = 0;
+
+    for(i=0; i<userSelected.length; i++){
+
+    
+    if (userSelected[i] == correctAns[i]){
+    console.log ("true");
+    right++;
+    $("#rightNum").html(right);
+    }
+
+    else {
+    console.log ("false");
+    wrong++;
+    $("#wrongNum").html(wrong);
+    }
+}
+    
+};
+
+
 
 
 
